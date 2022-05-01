@@ -12,7 +12,7 @@ namespace coup
         std::string turn(){return "";}
         std::string winner(){return "";}
         std::vector<std::string> players(){
-            std::vector<std::string> p{};
+            std::vector<std::string> p{"","","","","",""};
             return p;
         }
         
