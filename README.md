@@ -1,3 +1,6 @@
+Grade:
+
+![image](https://github.com/oridarshan/coup-a/blob/8cc1c5b943519f62c08890a23aeb8098d3452e94/bash_grade.jpg)
 <div dir="rtl" lang="he">
 
 # קו - שלב א
