@@ -7,26 +7,18 @@ namespace coup
 {
     class Duke : public Player
     {
-    private:
-
     public:
-        Duke(Game game, std::string name);
+        Duke(Game& game, std::string name);
         ~Duke();
-        void steal (Player assassin);
-        void block (Player assassin);
-        void tax(){}
+        void block(Player& other); // block Captain's steal
+        
+        /**
+         * @brief take 3 coins from the bank, unblockable
+         * 
+         */
+        void tax();
+        std::string role() const {return "Duke";}
     };
 
-    void Duke::steal (Player assassin){}
-    void Duke::block (Player assassin){}
-
-    // Duke::Duke(Game game, std::string name) : Player(game, name)
-    Duke::Duke(Game game, std::string name) : Player(game, name)
-    {
-    }
-
-    Duke::~Duke()
-    {
-    }
 
 }

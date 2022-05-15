@@ -7,24 +7,19 @@ namespace coup
 {
     class Assassin : public Player
     {
-    private:
-
     public:
-        Assassin(Game game, std::string name);
+        Assassin(Game& game, std::string name);
         ~Assassin();
-        void steal (Player assassin);
-        void block (Player assassin);
+
+        /**
+         * @brief if has less than 7 coins, try to coup with 3 coins
+         * 
+         * @param other 
+         */
+        void coup(Player &other);
+        void block(Player& other){throw ("Assassin can't block");}
+        std::string role() const {return "Assassin";}
     };
 
-    void Assassin::steal (Player assassin){}
-    void Assassin::block (Player assassin){}
-
-    Assassin::Assassin(Game game, std::string name) : Player(game, name)
-    {
-    }
-
-    Assassin::~Assassin()
-    {
-    }
 
 }

@@ -57,15 +57,18 @@ int main() {
 	ambassador.income();
 	captain.income();
 	contessa.income();
+	std::cout << "incomes successful" << std::endl;
 
 	// throws exception, it is duke's turn now
 	try{
 		assassin.income();
-	}catch (const std::exception &e){
-		std::cerr << e.what() << '\n';
+	}catch (...){
+		// std::cerr << e.what() << '\n';
 	}
 	duke.income();
+	std::cout << "incomes successful2" << std::endl;
 	assassin.foreign_aid();
+	std::cout << "incomes successful3" << std::endl;
 
 	// throws exception, the last operation duke performed
 	// is income, which cannot be blocked by any role
