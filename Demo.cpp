@@ -74,9 +74,8 @@ int main() {
 	// is income, which cannot be blocked by any role
 	try{
 		captain.block(duke);
-	}catch (const std::exception &e)
+	}catch (...)
 	{
-		std::cerr << e.what() << '\n';
 	}
 
 	cout << duke.coins() << endl; // prints 2
@@ -86,9 +85,8 @@ int main() {
 	// is foreign aid, which cannot be blocked by contessa
 	try{
 		contessa.block(assassin);
-	}catch (const std::exception &e)
+	}catch (...)
 	{
-		std::cerr << e.what() << '\n';
 	}
 
 	duke.block(assassin);
